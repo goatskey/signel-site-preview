@@ -246,11 +246,11 @@ a.card:hover { text-decoration: none; box-shadow: var(--shadow); }
 @media print { .header, .topbar, .footer, .quote-box, .search { display: none; } }
 
 /* --- added for the Node build: nothing above this line was modified --- */
-@font-face{font-family:"Red Hat Display";src:url("/fonts/RedHatDisplay-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Red Hat Display";src:url("/fonts/RedHatDisplay-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:"Roboto Condensed";src:url("/fonts/Roboto_Condensed-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Roboto Condensed";src:url("/fonts/Roboto_Condensed-SemiBold.woff2") format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"Roboto Condensed";src:url("/fonts/Roboto_Condensed-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Red Hat Display";src:url("/signel-site-preview/fonts/RedHatDisplay-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Red Hat Display";src:url("/signel-site-preview/fonts/RedHatDisplay-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Roboto Condensed";src:url("/signel-site-preview/fonts/Roboto_Condensed-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Roboto Condensed";src:url("/signel-site-preview/fonts/Roboto_Condensed-SemiBold.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Roboto Condensed";src:url("/signel-site-preview/fonts/Roboto_Condensed-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
 
 /* .rich was emitted by the old renderer and styled by nothing */
 .rich{line-height:1.65}
