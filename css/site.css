@@ -339,3 +339,30 @@ a.lang:hover{text-decoration:underline}
 .tabs details[open] summary{border-bottom:1px solid var(--line)}
 .tabs .rich{padding:14px 16px}
 .figure.map iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:var(--radius)}
+
+/* --- news cards, matching signel.ca --- */
+.ngrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;align-items:stretch}
+.ncard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.ncard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.ncard .img{aspect-ratio:1;background:var(--off);display:grid;place-items:center;overflow:hidden}
+.ncard .img img{width:100%;height:100%;object-fit:cover}
+.ncard .body{padding:18px 18px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ncard .kicker{margin:0;font-family:var(--font-cond);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+.ncard .date{margin:0;font-size:13px;color:#8D8D8D}
+.ncard h3{margin:2px 0 0;font-size:16px;line-height:1.35;text-transform:none}
+/* text-only cards are the common case: give them a coloured spine so the grid reads evenly */
+.ncard--text .body{border-top:4px solid var(--yellow)}
+.ncard--text h3{font-size:18px}
+
+/* --- news post, matching signel.ca's single-post layout --- */
+.wrap.narrow{max-width:820px}
+.post h1{font-size:32px;line-height:1.18;margin:8px 0 18px;text-transform:none}
+.post-hero{margin:0 0 18px}
+.post-hero img{width:100%;border-radius:var(--radius)}
+.post-meta{font-family:var(--font-cond);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 22px}
+.post .prose{font-size:16.5px}
+.share{display:flex;align-items:center;gap:14px;margin:34px 0 10px;padding-top:18px;border-top:1px solid var(--line)}
+.share span{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.share a{font-size:14px}
+.news-post .ngrid{margin-top:8px}
+@media (max-width:700px){.post h1{font-size:25px}}
