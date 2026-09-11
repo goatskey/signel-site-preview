@@ -331,3 +331,11 @@ a.lang:hover{text-decoration:underline}
 .newsletter h3{margin:0 0 6px;font-size:22px}
 .newsletter p{margin:0;color:var(--muted);max-width:70ch}
 @media (max-width:860px){.newsletter .wrap{grid-template-columns:1fr}}
+.tabs details{border:1px solid var(--line);border-radius:var(--radius);margin:0 0 10px;background:#fff}
+.tabs summary{cursor:pointer;padding:13px 16px;font-family:var(--font-cond);font-weight:600;list-style:none}
+.tabs summary::-webkit-details-marker{display:none}
+.tabs summary::after{content:"+";float:right;color:var(--blue);font-weight:700}
+.tabs details[open] summary::after{content:"\2212"}
+.tabs details[open] summary{border-bottom:1px solid var(--line)}
+.tabs .rich{padding:14px 16px}
+.figure.map iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:var(--radius)}
