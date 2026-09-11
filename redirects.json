@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T17:51:46.654Z",
+  "generated": "2026-09-11T18:03:33.768Z",
   "redirects": [
     {
       "from": "/produit/poteau-axe/",
@@ -20088,6 +20088,18 @@
       "to": "/returns/",
       "status": 301,
       "why": "broken legacy href on the live site"
+    },
+    {
+      "from": "/catalogues/B_Guide-2025.html",
+      "to": "/catalogue/",
+      "status": 301,
+      "why": "the buyer's guide now has its own page, sized to fit"
+    },
+    {
+      "from": "/catalogues/G_Achat-2026.html",
+      "to": "/catalogue/",
+      "status": 301,
+      "why": "the buyer's guide now has its own page, sized to fit"
     },
     {
       "from": "/wp-login.php",

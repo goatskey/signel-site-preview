@@ -3355,6 +3355,8 @@ Redirect 301 /commande/ /contact/
 Redirect 301 /panier/ /contact/
 Redirect 301 /boutique/ /products/
 Redirect 301 /remboursements_retours/ /returns/
+Redirect 301 /catalogues/B_Guide-2025.html /catalogue/
+Redirect 301 /catalogues/G_Achat-2026.html /catalogue/
 Redirect 301 /wp-login.php /
 Redirect 301 /wp-admin/ /
 

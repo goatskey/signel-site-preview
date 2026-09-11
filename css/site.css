@@ -373,3 +373,16 @@ a.lang:hover{text-decoration:underline}
 .scard .body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
 .scard h3{margin:0;font-size:16px}
 .scard .more{margin-top:auto;font-family:var(--font-cond);font-weight:700;color:var(--blue)}
+
+/* --- catalogue flipbook --- */
+/* Their embed is a fixed 1627x1080 box, so the book overflows and the page scrolls.
+   Size it to the viewport instead: the spread always fits. */
+.flipbook{background:#eaeaea;padding-bottom:18px}
+.flip-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:12px;flex-wrap:wrap}
+.flip-bar h1{margin:0;font-size:22px;text-transform:none}
+.flip-actions{display:flex;gap:8px}
+.flip-frame{width:min(100%,1500px);margin:0 auto;height:calc(100vh - 250px);min-height:420px;background:#dcdcdc;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.flip-frame iframe{width:100%;height:100%;border:0;display:block}
+.flip-frame:fullscreen{width:100vw;height:100vh;border-radius:0;max-width:none}
+.flip-note{margin:12px auto 0;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:860px){.flip-frame{height:calc(100vh - 210px);min-height:340px}.flip-bar h1{font-size:18px}}

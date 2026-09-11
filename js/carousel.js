@@ -50,3 +50,17 @@
   var list = document.querySelectorAll('[data-carousel]');
   for (var i = 0; i < list.length; i++) init(list[i]);
 })();
+
+// Full-screen control for the catalogue flipbook.
+(function () {
+  'use strict';
+  var btn = document.querySelector('[data-fullscreen]');
+  var frame = document.querySelector('[data-flip]');
+  if (!btn || !frame) return;
+  if (!frame.requestFullscreen && !frame.webkitRequestFullscreen) { btn.hidden = true; return; }
+  btn.addEventListener('click', function () {
+    var fs = document.fullscreenElement || document.webkitFullscreenElement;
+    if (fs) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); }
+    else { (frame.requestFullscreen || frame.webkitRequestFullscreen).call(frame); }
+  });
+})();
