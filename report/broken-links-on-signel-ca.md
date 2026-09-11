@@ -3,6 +3,8 @@
 Compiled 2026-09-11. Every link below was fetched from the live site.
 Open the page in the **Where to check** column and you will see the problem there.
 
+A print-ready copy of this page is at **signel-broken-links.pdf** in the same folder.
+
 ## 1. Download links that lead to a missing file
 
 8 documents are linked from the site but return "not found".
