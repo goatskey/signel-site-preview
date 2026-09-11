@@ -1,0 +1,18 @@
+{
+  "generated": "2026-09-11T14:51:59.086Z",
+  "fails": [],
+  "warns": [],
+  "counts": {
+    "html": 1855,
+    "products": 1588,
+    "categories": 90,
+    "untranslatedRuns": 1351,
+    "pendingKeys": 450,
+    "forms": 1856,
+    "buttons": {
+      "burger": 1855,
+      "search-submit": 1855,
+      "thumb": 614
+    }
+  }
+}
