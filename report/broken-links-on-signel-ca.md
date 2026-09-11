@@ -22,13 +22,9 @@ Open the page in the **Where to check** column and you will see the problem ther
 
 | Where to check | The file | What happens |
 |---|---|---|
-| — | `/img/2017/06/rad52_revisé.jpg` | https://www.signel.ca/wp-content/uploads/2017/06/rad52_revisé.jpg → 404, so the image is blank |
-| — | `/img/2021/06/Signel-SIGN_Recrutement_Été21.mp3` | https://www.signel.ca/wp-content/uploads/2021/06/Signel-SIGN_Recrutement_Été21.mp3 → 404, so the image is blank |
-| product and news pages that use this image | `rad52_revisé-150x150.jpg` | https://www.signel.ca/wp-content/uploads/2017/06/rad52_revisé-150x150.jpg → 404 |
-| product and news pages that use this image | `rad52_revisé.jpg` | https://www.signel.ca/wp-content/uploads/2017/06/rad52_revisé.jpg → 404 |
-| product and news pages that use this image | `rad52_revisé-300x300.jpg` | https://www.signel.ca/wp-content/uploads/2017/06/rad52_revisé-300x300.jpg → 404 |
-| product and news pages that use this image | `rad52_revisé-180x180.jpg` | https://www.signel.ca/wp-content/uploads/2017/06/rad52_revisé-180x180.jpg → 404 |
-| product and news pages that use this image | `FP-0058_BIGbollard-1.pdf` | https://www.signel.ca/wp-content/uploads/2018/07/FP-0058_BIGbollard-1.pdf → 404 |
+| https://www.signel.ca/radars-signel-gestion-de-vitesse-ville/ | `rad52_revisé.jpg`<br><small>plus 3 resized copies WordPress made of it</small> | https://www.signel.ca/wp-content/uploads/2017/06/rad52_revisé.jpg → 404, so nothing displays |
+| https://www.signel.ca/sommes-a-radio/ | `Signel-SIGN_Recrutement_Été21.mp3` | https://www.signel.ca/wp-content/uploads/2021/06/Signel-SIGN_Recrutement_Été21.mp3 → 404, so nothing displays |
+| https://www.signel.ca/le-big-bollard/ | `FP-0058_BIGbollard-1.pdf` | https://www.signel.ca/wp-content/uploads/2018/07/FP-0058_BIGbollard-1.pdf → 404, so nothing displays |
 
 ## 3. Links to pages that no longer exist
 
@@ -97,7 +93,7 @@ reader reads it out backwards. On a phone there is no way to use it at all.
 | https://www.signel.ca/les-panneaux-enroulables/ | **info@signel.ca** | Select the address and copy it. You get it reversed. |
 | https://www.signel.ca/14594/ | **marketing@signel.ca** | Select the address and copy it. You get it reversed. |
 
-## 6. Pages showing raw code to visitors
+## 7. Pages showing raw code to visitors
 
 | Where to check | What a visitor sees | Should be |
 |---|---|---|
@@ -224,7 +220,7 @@ reader reads it out backwards. On a phone there is no way to use it at all.
 | DP[M]102 (product variation) | DPS102Q2 | https://www.signel.ca/produit/dpm102x-product-variation-5/ |
 | DP[M]102 (product variation) | DPS102Q1 | https://www.signel.ca/produit/dpm102x-product-variation-4/ |
 
-## 10. Pages that are published but show nothing
+## 11. Pages that are published but show nothing
 
 | Page | What is on it | Note |
 |---|---|---|
