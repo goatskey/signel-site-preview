@@ -366,3 +366,10 @@ a.lang:hover{text-decoration:underline}
 .share a{font-size:14px}
 .news-post .ngrid{margin-top:8px}
 @media (max-width:700px){.post h1{font-size:25px}}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin:22px 0}
+.scard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.scard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.scard img,.scard .noimg{width:100%;aspect-ratio:16/6;object-fit:cover;background:var(--off)}
+.scard .body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.scard h3{margin:0;font-size:16px}
+.scard .more{margin-top:auto;font-family:var(--font-cond);font-weight:700;color:var(--blue)}
