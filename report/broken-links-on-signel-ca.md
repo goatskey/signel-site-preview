@@ -235,6 +235,7 @@ reader reads it out backwards. On a phone there is no way to use it at all.
 
 | Where | Problem | Why it matters |
 |---|---|---|
+| https://www.signel.ca/ | the CONSULTEZ LE PRODUIT button under "SÉCURISEZ VOS ROUTES" has an empty link | Clicking it does nothing. It sits under the headline product on your home page. On the rebuild it points at the Rectangular rapid-flashing beacons product page. |
 | https://www.signel.ca/politique-de-confidentialite/ | contains the address privacy@challengeu.com | That is another company. Your privacy policy tells customers to contact them. |
 | Footer of every page | the privacy policy link points at a staging domain | Visitors land on a test copy of the site instead of the real policy. |
 | https://www.signel.ca/produits/ | takes about 22 seconds to load when not cached | Most visitors leave before it appears. |
