@@ -231,7 +231,32 @@ reader reads it out backwards. On a phone there is no way to use it at all.
 | https://www.signel.ca/test-typo/ | lorem ipsum placeholder text in four fonts | An internal design test page, public and in the sitemap |
 | https://www.signel.ca/equipe/ | nothing | Three records, all named France Couture, none display |
 
-## 12. Other things worth fixing
+## 12. Hidden spam injected into product pages
+
+**This looks like a compromised WordPress install.** Thirteen product descriptions contain a block
+of markup that positions a link thousands of pixels off the left of the screen, so a visitor never sees
+it while a search engine does. It links to `ewpacfo.com`, which has nothing to do with Signel.
+
+This is worth showing whoever maintains the site. It usually means a plugin or theme was exploited,
+and the injected content is a symptom rather than the problem. None of it is carried into the rebuild.
+
+| Where to check | What to do | What is hidden there |
+|---|---|---|
+| https://www.signel.ca/produit/ptba-poteau-pour-panneau/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/boite-de-cadenassage-portative/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/moraillon-bouchon-de-cadenassage/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/cloture-temporaire/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/kit-pour-brigadier-scolaire/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/interdiction-de-jeter-des-dechets/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/enseigne-pliante-pour-dissimuler-le-pictogramme/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/amortisseur-apneu/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/support-de-fleche-pivotant-en-acier/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/structure-complete-en-acier/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/barre-lumineuse-signel-a-del/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/lampe-halogene/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+| https://www.signel.ca/produit/lampe-a-del-pour-fleches/ | View the page source and search for `div-comments` | A link to ewpacfo.com, positioned off-screen |
+
+## 13. Other things worth fixing
 
 | Where | Problem | Why it matters |
 |---|---|---|
