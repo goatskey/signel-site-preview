@@ -556,3 +556,64 @@ a.lang:hover{text-decoration:underline}
 main > .wrap{padding-bottom:70px}
 @media (max-width:1024px){.pbanner{padding-bottom:70px}.pbanner-notch{height:70px}}
 @media (max-width:700px){.pbanner{padding-bottom:50px}.pbanner-notch{height:44px}}
+
+/* --- category archive: their two-column shell ------------------------------------
+   signel.ca pins a category accordion to the left of every shop and archive page and
+   runs the product grid beside it. We had the grid full-width with no way to move
+   sideways through the taxonomy. */
+.cat-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:30px;align-items:start}
+.cat-side{position:sticky;top:16px;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;background:#fff}
+.cat-side h2{font-size:1rem;margin:0 0 10px;text-transform:uppercase;font-family:var(--font-cond)}
+.cat-side ul{list-style:none;margin:0;padding:0}
+.cat-side > ul > li{border-top:1px solid var(--line)}
+.cat-side > ul > li:first-child{border-top:0}
+.cat-side summary,.cat-side > ul > li > a{display:block;padding:8px 0;font-size:.9rem;cursor:pointer;font-weight:600}
+.cat-side summary{list-style:none}
+.cat-side summary::-webkit-details-marker{display:none}
+.cat-side summary::after{content:"+";float:right;color:var(--blue);font-weight:700}
+.cat-side details[open] > summary::after{content:"–"}
+.cat-side summary a{color:var(--ink)}
+.cat-side details ul{padding:0 0 8px 10px}
+.cat-side details li a{display:block;padding:4px 0;font-size:.84rem;color:var(--muted)}
+.cat-side details li a:hover,.cat-side details li a[aria-current]{color:var(--blue)}
+.cat-side details li a[aria-current]{font-weight:700}
+@media (max-width:900px){.cat-layout{grid-template-columns:1fr}.cat-side{position:static}}
+
+/* --- /services/ and /solutions/: their three-across card grid -------------------- */
+.index-lead{max-width:900px;margin:0 auto 40px;text-align:center;font-size:1.05rem}
+.index-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:60px 30px;align-items:start}
+.icard{display:flex;flex-direction:column;gap:14px;background:#fff}
+.icard img{width:100%;height:auto;border-radius:var(--radius);display:block;margin:0}
+.icard figure{margin:0}
+.icard h3,.icard .icard-title{margin:0;font-family:var(--font-cond);text-transform:uppercase;font-size:1.15rem;color:var(--blue)}
+.icard .rich,.icard p{margin:0;color:var(--muted)}
+.icard .btn{align-self:flex-start;margin-top:auto}
+@media (max-width:1024px){.index-cards{grid-template-columns:repeat(2,1fr);gap:40px 24px}}
+@media (max-width:700px){.index-cards{grid-template-columns:1fr}}
+
+/* --- Elementor rows recovered from the source containers -------------------------
+   signel.ca lays its content pages out as horizontal containers: an image beside its
+   paragraph, a pale #D9E4F1 band holding a heading and its text, two bullet lists side
+   by side. Our extractor discarded the container and stacked everything, which is why
+   the pages read as a different design even where the words matched. */
+.erow{display:grid;grid-template-columns:var(--row-cols,repeat(auto-fit,minmax(280px,1fr)));gap:20px 40px;align-items:center;margin:40px 0}
+.erow--band{background:var(--row-bg);border-radius:var(--radius);padding:40px;margin:50px 0}
+.ecol{min-width:0}
+.ecol > :first-child{margin-top:0}
+.ecol > :last-child{margin-bottom:0}
+.ecol figure{margin:0}
+.ecol img{width:100%;height:auto;border-radius:var(--radius);display:block}
+.erow .erow{margin:0}
+@media (max-width:820px){.erow{grid-template-columns:1fr;gap:20px}.erow--band{padding:24px}}
+
+/* Careers: their job cards carry the opening's own blurb, not just its title. */
+.cards--jobs{margin-top:40px}
+.cards--jobs .card .body p{color:var(--muted);margin:.5em 0 1em}
+/* A tab panel now holds real blocks rather than one lump of HTML. */
+.tabpane > :first-child{margin-top:0}
+.tabpane > :last-child{margin-bottom:0}
+.tabpane .erow{margin:20px 0}
+/* A row that is really a card grid aligns to the top; a picture beside a paragraph centres. */
+.erow--grid{align-items:start;gap:60px 30px}
+.erow--grid .ecol{display:flex;flex-direction:column;gap:14px}
+.erow--grid .ecol p:last-child{margin-top:auto}
