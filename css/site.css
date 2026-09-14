@@ -496,3 +496,63 @@ a.lang:hover{text-decoration:underline}
 .footer-legal p{margin:0;text-align:center;font-size:.8rem;color:#8a959e}
 @media (max-width:1024px){.footer-main{grid-template-columns:1fr;padding-top:110px}.f-cols{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:700px){.f-cols{grid-template-columns:1fr}.f-account{justify-content:flex-start}}
+
+/* --- mega menu panels, measured from signel.ca -----------------------------------
+   All three panels sit on #D9E4F1 with 50px of padding and a -7px top margin so they
+   tuck under the header. Produits is a taxonomy menu four across; Services and Vos
+   Besoins are loop grids of bordered image cards three across. Ours used to render all
+   three as plain text lists, which is the difference the client saw on hover. */
+.mega{width:100vw;left:50%;transform:translateX(-50%);max-width:none;background:#D9E4F1;border:0;border-radius:0;box-shadow:0 10px 14px -8px rgba(0,0,0,.25);padding:0;margin-top:-7px}
+.has-menu:hover > .mega, .has-menu:focus-within > .mega{display:block}
+.mega-grid{width:min(1280px,94vw);margin:0 auto}
+.mega-terms{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 40px;padding:50px}
+.mega-term h3{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;margin:0;font-size:16px;line-height:1.25}
+.mega-term h3 a{color:var(--ink)}
+.mega-term h3 a:hover{color:#F5A400;text-decoration:none}
+.mega-term hr{border:0;border-top:1px solid rgba(14,23,27,.25);margin:8px 0 10px}
+.mega-term ul{list-style:none;margin:0;padding:0}
+.mega-term li a{display:block;padding:4px 0;color:var(--ink);font-size:16px;line-height:1.3}
+.mega-term li a:hover{color:var(--blue);text-decoration:none}
+.mega-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:50px 20px}
+.mcard{display:flex;flex-direction:column;gap:20px;background:#F8F8F8;border:2px solid var(--blue);border-radius:15px;padding:20px;transition:transform .5s}
+.mcard:hover{transform:translateY(-20px);text-decoration:none}
+.mcard img,.mcard-noimg{display:block;width:100%;height:130px;object-fit:cover;object-position:center;transition:filter .3s;background:#E6ECF3}
+.mcard:hover img{filter:brightness(105%) saturate(105%)}
+.mcard h3{margin:0;text-align:center;font-family:var(--font-cond);font-weight:700;font-size:20px;line-height:1.2;color:var(--blue)}
+@media (max-width:1024px){.mega-terms{grid-template-columns:repeat(2,1fr);padding:28px 20px}.mega-cards{grid-template-columns:repeat(2,1fr);padding:28px 20px}}
+
+/* Footer row B1: the 8-item site menu, a horizontal strip between the account call to
+   action and the two link columns. Links are padded 0 20px and invert on hover. */
+.f-menu{display:flex;flex-wrap:wrap;background:#0E171B;margin:0 0 28px}
+.f-menu a{display:inline-block;padding:10px 20px;color:#fff;font-size:.9rem}
+.f-menu a:hover{background:#F8F8F8;color:#0E171B;text-decoration:none}
+.f-cols{grid-template-columns:repeat(2,1fr)}
+@media (max-width:700px){.f-menu a{padding:8px 14px}}
+
+/* --- the page banner, measured from signel.ca ------------------------------------
+   Every page on their site but the product pages opens with the same band: a 1800x450
+   photo under a half-opacity #0E171B wash, min-height 250px, the title centred in
+   Roboto Condensed with a soft shadow, an optional line under it, the breadcrumbs, and
+   a downward triangle notched out of the bottom edge in the page colour.
+
+   Their own copy of this band carries a second background-image rule pointing at
+   wpmanstage.com, a staging host whose DNS no longer resolves. The signel.ca-hosted
+   rule wins in the cascade so the photo still shows, but it is one specificity change
+   away from a black strip. We reference our mirrored copy and nothing else. */
+.pbanner{position:relative;min-height:250px;display:flex;flex-direction:column;justify-content:flex-start;
+  padding:2% 0 100px;background:linear-gradient(rgba(14,23,27,.5),rgba(14,23,27,.5)),var(--pb-image) center/cover no-repeat,#0E171B;
+  text-align:center;color:#F8F8F8;overflow:hidden}
+.pbanner .wrap{position:relative;z-index:1}
+.pbanner h1{margin:0 0 16px;color:#F8F8F8;text-shadow:0 0 30px rgba(0,0,0,.3)}
+.pbanner-sub{margin:0;color:#F8F8F8;font-size:1.05rem;font-weight:500}
+.pbanner .crumbs{margin-top:10px;padding:0;font-size:16px;font-weight:500;color:#F8F8F8}
+.pbanner .crumbs a{color:#F8F8F8}
+.pbanner-notch{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:100px;display:block}
+.pbanner-notch path{fill:#fff}
+.crumbs-bare{padding-top:14px}
+/* Their content container sits 70px under the band and 70px above the footer. */
+.pbanner + main > .wrap,
+.pbanner + main > article > .wrap:first-child{margin-top:40px}
+main > .wrap{padding-bottom:70px}
+@media (max-width:1024px){.pbanner{padding-bottom:70px}.pbanner-notch{height:70px}}
+@media (max-width:700px){.pbanner{padding-bottom:50px}.pbanner-notch{height:44px}}
