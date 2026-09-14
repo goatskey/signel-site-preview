@@ -46,6 +46,23 @@
     });
     window.addEventListener('resize', paint);
     paint();
+
+    // Their solutions carousel advances every 2.5s and pauses on hover or interaction.
+    var ms = Number(root.getAttribute('data-autoplay') || 0);
+    if (ms > 0 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var timer = null, stopped = false;
+      var tick = function () { if (!stopped) go(index + 1); };
+      var start = function () { if (!timer) timer = setInterval(tick, ms); };
+      var stop = function () { clearInterval(timer); timer = null; };
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+      root.addEventListener('focusin', stop);
+      if (prev) prev.addEventListener('click', function () { stopped = true; stop(); });
+      if (next) next.addEventListener('click', function () { stopped = true; stop(); });
+      if (dots) dots.addEventListener('click', function () { stopped = true; stop(); });
+      track.addEventListener('touchstart', function () { stopped = true; stop(); }, { passive: true });
+      start();
+    }
   }
   var list = document.querySelectorAll('[data-carousel]');
   for (var i = 0; i < list.length; i++) init(list[i]);

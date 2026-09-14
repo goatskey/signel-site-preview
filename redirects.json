@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T20:02:30.176Z",
+  "generated": "2026-09-14T13:21:18.743Z",
   "redirects": [
     {
       "from": "/produit/poteau-axe/",
@@ -20037,9 +20037,9 @@
     },
     {
       "from": "/infolettre/",
-      "to": "/news/",
+      "to": "/newsletter/",
       "status": 301,
-      "why": "newsletter needs a backend"
+      "why": "newsletter page exists; the form waits on a backend"
     },
     {
       "from": "/mon-compte/",

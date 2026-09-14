@@ -1,6 +1,6 @@
 # signel.ca — verified list of what is broken
 
-Compiled 2026-09-11. Every link below was fetched from the live site.
+Compiled 2026-09-14. Every link below was fetched from the live site.
 Open the page in the **Where to check** column and you will see the problem there.
 
 A print-ready copy of this page is at **signel-broken-links.pdf** in the same folder.

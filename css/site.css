@@ -386,3 +386,113 @@ a.lang:hover{text-decoration:underline}
 .flip-frame:fullscreen{width:100vw;height:100vh;border-radius:0;max-width:none}
 .flip-note{margin:12px auto 0;color:var(--muted);font-size:14px;text-align:center}
 @media (max-width:860px){.flip-frame{height:calc(100vh - 210px);min-height:340px}.flip-bar h1{font-size:18px}}
+
+/* --- header, matched to signel.ca ------------------------------------------
+   Their strip is #004EA4 with the account affordances on the right, and their
+   main bar is a 190px logo plus the mega menu. No phone anywhere in the header. */
+.topbar{background:var(--blue);color:#fff;min-height:40px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:40px}
+.topbar a{color:#F8F8F8;font-size:14px;padding:0 30px 0 0}
+.topbar a:hover{color:#fff;text-decoration:underline}
+.topbar-right{display:flex;align-items:center;gap:18px}
+.topbar-right a{display:inline-flex;align-items:center;gap:7px;padding:0}
+.topbar-right svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.topbar-right .lang{font-weight:700;letter-spacing:.04em}
+@media (max-width:700px){.topbar a{padding-right:14px;font-size:13px}.topbar-right span{display:none}}
+
+.header{box-shadow:0 7px 10px -4px rgba(0,0,0,.25)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:20px;padding-bottom:20px;min-height:0}
+.logo img{width:190px;height:auto;display:block}
+@media (max-width:1024px){.logo img{width:150px}}
+.header .nav{margin-left:auto}
+
+/* --- hero, matched to signel.ca: 555px tall, dark overlay, no button --- */
+.hero{min-height:555px;display:grid;place-items:center;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(14,23,27,.5);z-index:1}
+.hero .wrap{position:relative;z-index:2;text-align:center;padding:40px 20px}
+.hero h1{font-size:50px;line-height:1.25;margin:0 0 2em;color:#fff}
+.hero p{font-size:21px;font-weight:600;line-height:1.3;color:#F8F8F8;max-width:58%;margin:0 auto}
+@media (max-width:1024px){.hero p{max-width:80%}}
+@media (max-width:767px){.hero{min-height:420px}.hero h1{font-size:32px;margin-bottom:1.2em}.hero p{font-size:17px;max-width:92%}}
+
+/* --- the search bar their site puts between the hero and the tiles --- */
+.searchbar{padding:50px 0}
+.searchbar form{display:flex;align-items:center;width:100%;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.searchbar input{flex:1;border:0;outline:0;padding:16px 20px;font:inherit;font-size:17px;background:transparent}
+.searchbar button{border:0;background:var(--blue);color:#fff;padding:0 22px;align-self:stretch;cursor:pointer;display:grid;place-items:center}
+.searchbar button:hover{background:#003d80}
+.searchbar svg{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round}
+@media (max-width:1024px){.searchbar{padding:5% 3%}}
+
+/* --- category tiles: 5 across, caption below the image, sentence case --- */
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:50px 40px}
+.tile{display:block;position:static;border:0;border-radius:0;aspect-ratio:auto;background:none;text-align:center}
+.tile img{width:100%;aspect-ratio:300/281;object-fit:cover;border:2px solid #201D1D;border-radius:15px;display:block}
+.tile span{position:static;display:block;margin-top:12px;padding:0;background:none;color:var(--ink);font-family:var(--font-body);font-size:18px;font-weight:600;text-transform:none}
+.tile:hover span{color:var(--blue)}
+@media (max-width:1024px){.tiles{grid-template-columns:repeat(3,1fr);padding:0 3%}}
+@media (max-width:767px){.tiles{grid-template-columns:1fr}}
+
+/* --- banner carousel: fixed 400px, contain on white, chevrons outside --- */
+.banner-section{padding:50px 0;background:none}
+.banner .track{gap:0}
+.banner .track>a{width:100%;aspect-ratio:auto;height:400px;border-radius:0;background:#fff}
+.banner .track img{width:100%;height:100%;object-fit:contain}
+.carousel.banner .nav{width:auto;height:auto;background:none;box-shadow:none;border-radius:0}
+.carousel.banner .nav:hover{background:none}
+.carousel.banner .nav svg{width:56px;height:56px;stroke:var(--ink);stroke-width:1.6}
+.carousel.banner .nav.prev{left:-64px}
+.carousel.banner .nav.next{right:-64px}
+.carousel .dots .dot{width:15px;height:15px;border-radius:50%;background:var(--ink);opacity:.35}
+.carousel .dots .dot.on{width:15px;border-radius:50%;background:var(--amber);opacity:1}
+@media (max-width:1024px){.banner .track>a{height:184px}.carousel.banner .nav.prev{left:2px}.carousel.banner .nav.next{right:2px}.carousel.banner .nav svg{width:34px;height:34px}}
+@media (max-width:767px){.banner .track>a{height:106px}.carousel .dots .dot,.carousel .dots .dot.on{width:9px;height:9px}}
+
+/* --- solutions: split card, image left 33%, pale panel right 66% offset --- */
+.solutions .track{gap:10px}
+.solutions .track>.scard-split{width:calc((100% - 10px)/2);display:flex;align-items:flex-start;color:inherit;transition:transform .5s ease}
+.solutions .track>.scard-split:hover{transform:translateY(-20px);text-decoration:none}
+.scard-split .pic{width:33%;flex:0 0 33%;z-index:1}
+.scard-split .pic img{width:100%;border-radius:15px;display:block;transition:filter .3s ease}
+.scard-split:hover .pic img{filter:brightness(105%) saturate(105%)}
+.scard-split .panel{width:66%;flex:0 0 66%;position:relative;z-index:0;background:var(--pale);margin:37px 0 0 -23px;padding:20px 20px 40px 40px;display:block}
+.scard-split .t{display:block;font-family:var(--font-cond);font-size:18px;font-weight:700;text-transform:uppercase;line-height:1.25;margin-bottom:8px;color:var(--ink)}
+.scard-split .d{display:block;font-size:15px;line-height:1.5;color:var(--ink)}
+.scard-split .plus{position:absolute;right:10px;bottom:1px;font-size:20px;line-height:1;color:var(--blue);font-weight:400}
+@media (max-width:767px){
+  .solutions .track>.scard-split{width:88%;flex-direction:column}
+  .scard-split .pic{width:100%;flex:none;padding:0 30px}
+  .scard-split .pic img{height:168px;object-fit:cover}
+  .scard-split .panel{width:100%;flex:none;margin:-41px 0 0 0;padding:60px 20px 20px;text-align:center}
+}
+
+/* --- newsletter band: blue plaque, rounded top, overlapping the footer --- */
+.newsletter{background:none;position:relative;z-index:2}
+.newsletter .wrap{background:var(--blue);color:#fff;border-radius:15px 15px 0 0;min-height:180px;
+  padding:30px 40px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:-91px}
+.newsletter h3{margin:0 0 8px;font-size:26px;color:#fff;text-transform:none}
+.newsletter p{margin:0;color:#e4ecf6;max-width:59%}
+.btn--news{background:#fff;color:var(--blue);border:0;font-weight:700;white-space:nowrap}
+.btn--news:hover{background:var(--yellow);color:var(--ink)}
+@media (max-width:860px){.newsletter .wrap{flex-direction:column;min-height:0;padding:24px;margin-bottom:-60px}.newsletter p{max-width:100%}}
+
+/* --- footer: 20/80, plain phone, real social icons, black centred legal strip --- */
+.footer{margin-top:0;padding:0}
+.footer-main{display:grid;grid-template-columns:20% 1fr;gap:40px;padding-top:141px;padding-bottom:20px}
+.f-contact .logo img{width:100%;max-width:180px;height:auto;filter:none;margin-bottom:16px}
+.f-contact p{margin:0 0 12px;line-height:1.6}
+.f-phone{color:#e7ecf1}
+.f-social{display:flex;gap:12px}
+.f-social a{display:grid;place-items:center;width:32px;height:32px;border:1px solid rgba(255,255,255,.35);color:#fff;transition:transform .2s ease}
+.f-social a:hover{transform:scale(1.12);background:rgba(255,255,255,.1)}
+.f-social svg{fill:currentColor}
+.f-right{display:flex;flex-direction:column;gap:24px}
+.f-account{display:flex;align-items:center;justify-content:space-around;gap:20px;flex-wrap:wrap;padding:20px 0}
+.f-account h2{margin:0;color:#fff;font-size:24px;text-transform:none}
+.f-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 60px}
+.f-cols h4{color:#fff;text-transform:uppercase;border:0;display:block;margin:0 0 10px}
+.f-cols a{display:block;padding:3px 0}
+.footer-legal{background:#000;padding:20px}
+.footer-legal p{margin:0;text-align:center;font-size:.8rem;color:#8a959e}
+@media (max-width:1024px){.footer-main{grid-template-columns:1fr;padding-top:110px}.f-cols{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.f-cols{grid-template-columns:1fr}.f-account{justify-content:flex-start}}

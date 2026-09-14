@@ -3346,7 +3346,7 @@ Redirect 301 /telechargements/ /downloads/
 Redirect 301 /besoins/ /solutions/
 Redirect 301 /actualites/ /news/
 Redirect 301 /conditions-generales-de-vente/ /terms-and-conditions/
-Redirect 301 /infolettre/ /news/
+Redirect 301 /infolettre/ /newsletter/
 Redirect 301 /mon-compte/ /contact/
 Redirect 301 /nous-joindre/ /contact/
 Redirect 301 /a-propos/ /about/
