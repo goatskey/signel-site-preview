@@ -519,6 +519,20 @@ a.lang:hover{text-decoration:underline}
    Besoins are loop grids of bordered image cards three across. Ours used to render all
    three as plain text lists, which is the difference the client saw on hover. */
 .mega{width:100vw;left:50%;transform:translateX(-50%);max-width:none;background:#D9E4F1;border:0;border-radius:0;box-shadow:0 10px 14px -8px rgba(0,0,0,.25);padding:0;margin-top:-7px}
+/* A full-bleed panel has to be positioned against the header, not against the link that
+   opens it. .has-menu was position:relative, so a 100vw box centred on it started half a
+   viewport to the right of the nav — which sits hard against the right edge now — and ran
+   off screen. With .has-menu static the containing block is .header (sticky counts as
+   positioned) and left:0/right:0 is the viewport. The nav then has to reach the header's
+   bottom edge: the links are centred in a 140px bar, so anchoring the panel to the bar's
+   bottom otherwise leaves ~50px of dead space that closes the menu on the way down. The
+   paired -20px margin / 20px padding stretches each link's hover box down to that edge
+   without moving the link itself, so the bar still reads centred against the logo. */
+@media (min-width:861px){
+  .header .nav{align-self:stretch;margin-bottom:-20px;padding-bottom:20px}
+  .header .has-menu{position:static;align-self:stretch;display:flex;align-items:center;margin-bottom:-20px;padding-bottom:20px}
+  .mega{left:0;right:0;width:auto;transform:none;top:100%;margin-top:0}
+}
 .has-menu:hover > .mega, .has-menu:focus-within > .mega{display:block}
 .mega-grid{width:min(1280px,94vw);margin:0 auto}
 .mega-terms{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 40px;padding:50px}
