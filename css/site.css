@@ -477,8 +477,18 @@ a.lang:hover{text-decoration:underline}
   padding:30px 40px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:-91px}
 .newsletter h3{margin:0 0 8px;font-size:26px;color:#fff;text-transform:none}
 .newsletter p{margin:0;color:#e4ecf6;max-width:59%}
-.btn--news{background:#fff;color:var(--blue);border:0;font-weight:700;white-space:nowrap}
-.btn--news:hover{background:var(--yellow);color:var(--ink)}
+/* Their two footer buttons are not the same button, which is why ours looked wrong in
+   the account row. The newsletter plaque's is off-white on a dark outline with a 10px
+   radius; the "Create your account" one is yellow with a light outline and square
+   corners. Both are Red Hat Display 600, not our condensed uppercase. */
+.btn--news{background:#F8F8F8;color:var(--ink);border:2px solid var(--ink);border-radius:10px;
+  padding:14px 30px 10px;font-family:var(--font-body,inherit);font-weight:600;text-transform:none;
+  letter-spacing:0;white-space:nowrap}
+.btn--news:hover{background:var(--yellow);color:var(--ink);border-color:var(--ink)}
+.btn--account{background:var(--yellow);color:#F8F8F8;border:2px solid #F8F8F8;border-radius:0;
+  padding:10px 30px;font-family:var(--font-body,inherit);font-weight:600;text-transform:none;
+  letter-spacing:0;white-space:nowrap}
+.btn--account:hover{background:#F8F8F8;color:var(--ink);border-color:#F8F8F8}
 @media (max-width:860px){.newsletter .wrap{flex-direction:column;min-height:0;padding:24px;margin-bottom:-60px}.newsletter p{max-width:100%}}
 
 /* --- footer: 20/80, plain phone, real social icons, black centred legal strip --- */
@@ -493,7 +503,8 @@ a.lang:hover{text-decoration:underline}
 .f-social svg{fill:currentColor}
 .f-right{display:flex;flex-direction:column;gap:24px}
 .f-account{display:flex;align-items:center;justify-content:space-around;gap:20px;flex-wrap:wrap;padding:20px 0}
-.f-account h2{margin:0;color:#fff;font-size:24px;text-transform:none}
+.f-account{padding:20px}
+.f-account h2{margin:0;color:#F8F8F8;font-size:24px;font-family:var(--font-cond);font-weight:400;text-transform:none;text-align:start}
 .f-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 60px}
 .f-cols h4{color:#fff;text-transform:uppercase;border:0;display:block;margin:0 0 10px}
 .f-cols a{display:block;padding:3px 0}
@@ -622,3 +633,5 @@ main > .wrap{padding-bottom:70px}
 .erow--grid{align-items:start;gap:60px 30px}
 .erow--grid .ecol{display:flex;flex-direction:column;gap:14px}
 .erow--grid .ecol p:last-child{margin-top:auto}
+/* The current page in the footer site menu inverts, as it does on their site. */
+.f-menu a[aria-current="page"]{background:#F8F8F8;color:#0E171B}
