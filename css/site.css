@@ -390,8 +390,13 @@ a.lang:hover{text-decoration:underline}
 /* --- header, matched to signel.ca ------------------------------------------
    Their strip is #004EA4 with the account affordances on the right, and their
    main bar is a 190px logo plus the mega menu. No phone anywhere in the header. */
+/* Both header bars are `e-con-full` on signel.ca: no max-width, so the topbar links sit
+   hard against the left edge and the cart and language switch against the right, and the
+   logo and mega menu do the same on the bar below. Ours were inside the centred 1240px
+   .wrap, which pulled all four corners inwards. Only these two bars are full bleed — the
+   footer and the newsletter plaque are `e-con-boxed` on their site and stay centred. */
 .topbar{background:var(--blue);color:#fff;min-height:40px}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:40px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:40px;max-width:none;padding:0 20px}
 .topbar a{color:#F8F8F8;font-size:14px;padding:0 30px 0 0}
 .topbar a:hover{color:#fff;text-decoration:underline}
 .topbar-right{display:flex;align-items:center;gap:18px}
@@ -401,7 +406,7 @@ a.lang:hover{text-decoration:underline}
 @media (max-width:700px){.topbar a{padding-right:14px;font-size:13px}.topbar-right span{display:none}}
 
 .header{box-shadow:0 7px 10px -4px rgba(0,0,0,.25)}
-.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:20px;padding-bottom:20px;min-height:0}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:none;padding:20px;min-height:0}
 .logo img{width:190px;height:auto;display:block}
 @media (max-width:1024px){.logo img{width:150px}}
 .header .nav{margin-left:auto}
